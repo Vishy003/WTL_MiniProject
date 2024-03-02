@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+<div class="topnav">
+  <img src="./img/InternshipPortal.png" alt="Logo">
+  <h1>Internship Portal</h1>
+  <a href="#" class="login-btn" onclick="redirectToLogin()">Login</a>
+</div>
+
+<div class="sidenav">
+  <a href="#" onclick = "redirectToResumeGenerator()"><i class="fas fa-tachometer-alt"></i> Resume Generator</a>
+  <a href="#" onclick = "redirectToScheduledCompanies()"><i class="fas fa-calendar-check"></i> Scheduled Companies</a>
+  <a href="#" onclick = "redirectToAppliedCompanies()"><i class = "fas fa-envelope"></i> Applied Companies</a>
+  <a href="#" onclick = "redirectToFillProfile()"><i class = "fas fa-user"></i> Fill Profile</a>
+  <a href="#" onclick = "redirectToAcademicDetails()"><i class = "fas fa-tasks"></i> Academic Details</a>
+</div>
+
+<div class="main">
+  <p style="font-size: 19px;">Welcome to PICT Internship Portal!</p>
+</div>
+
+<script>
+  function redirectToResumeGenerator() {
+    window.location.href = "resume.html";
+  }
+  function redirectToLogin() {
+    window.location.href = "login.html";
+  }
+
+  function redirectToScheduledCompanies() {
+    window.location.href = "ScheduledCompanies.html";
+  }
+  function redirectToAppliedCompanies(){
+    window.location.href = "appliedCompanies.html";
+  }
+
+  function redirectToFillProfile(){
+    window.location.href = "fillProfile.html";
+  }
+
+  function redirectToAcademicDetails(){
+    window.location.href = "academicDetails.html";
+  }
+  
+</script>
+
+</body>
+</html>
+
+
+
+

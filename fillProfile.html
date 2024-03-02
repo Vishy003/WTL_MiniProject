@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Companies</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+     
+</head>
+<body class="font-sans mx-0 my-0 py-0 px-0 box-border">
+    <nav class="bg-neutral-700 text-white py-4 align-middle sticky top-0 z-10">
+        <ul class="flex mx-4 justify-between">
+            <li class="flex">
+                <button><i class="fas fa-bars text-white"></i></button>
+                <img src="./img/InternshipPortal.png" width="50px" alt="">
+            </li>
+            <li>
+                PICT User
+            </li>
+            <li class="text-xl bg-fuchsia-700 px-3 mx-2 rounded-full">
+                *
+            </li>
+        </ul>
+    </nav>
+
+    <div class="flex my-2 position-relative left-0">
+        <div class="h-screen w-72 bg-fuchsia-700 text-white sticky top-0">
+            <ul>
+                <li class="my-4 mx-3"><a href="#" onclick="redirectToDashboard()"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="my-4 mx-3">
+                    <a href="#" onclick="redirectToScheduledCompanies()"><i class="fas fa-calendar-check"></i> Scheduled Companies</a>
+                </li>
+                <li class="my-4 mx-3"><a href="#" onclick = "redirectToAppliedCompanies()"><i class="fas fa-envelope"></i> Applied Companies</a></li>
+                <li class="my-4 mx-3"><a href="#" onclick = "redirectToFillProfile()"><i class="fas fa-user"></i> Fill Profile</a></li>
+                <li class="my-4 mx-3"><a href="#" onclick = "redirectToAcademicDetails()"><i class="fas fa-tasks"></i> Academic Details</a></li>
+            </ul>
+        </div>
+
+        <div class="mx-7 w-11/12">
+            <div class="flex flex-wrap justify-between my-2">
+                <div class="shadow-xl h-52 w-72 py-8 rounded-lg">
+                    <div class="py-1 text-center py-3"><i style='font-size:30px' class='fas'>&#xf406;</i></div>
+                    <div class="text-center py-3">Personal Details</div>
+                    <div class="flex justify-between mx-2 py-2">
+                        <button class="w-24 h-8"><i style="font-size:20px; color:red" class="fa">&#xf057;</i></button>
+                        <button class="w-24 h-8"><i style="font-size:20px" class="fa">&#xf055;</i></button>
+                    </div>
+                </div>
+
+                <div class="shadow-xl h-52 w-72 py-8">
+                    <div class="py-1 text-center py-3"><i style='font-size:30px' class='fas'>&#xf19d;</i></div>
+                    <div class="text-center py-3">Academics</div>
+                    <div class="flex justify-between mx-2 py-2">
+                        <button class="w-24 h-8"><i style="font-size:20px; color:red" class="fa">&#xf057;</i></button>
+                        <button class="w-24 h-8"><i style="font-size:20px" class="fa">&#xf055;</i></button>
+                    </div>
+                </div>
+
+                <div class="shadow-xl h-52 w-72 py-8">
+                    <div class="py-1 text-center py-3"><i style='font-size:30px' class='fas'>&#xf5da;</i></div>
+                    <div class="text-center py-3">Examinations</div>
+                    <div class="flex justify-between mx-2 py-2">
+                        <button class="w-24 h-8"><i style="font-size:20px; color:red" class="fa">&#xf057;</i></button>
+                        <button class="w-24 h-8"><i style="font-size:20px" class="fa">&#xf055;</i></button>
+                    </div>
+                </div>
+
+                <div class="shadow-xl h-52 w-72 py-8">
+                    <div class="py-1 text-center py-3"><i style="font-size:30px" class="fa">&#xf0e0;</i></div>
+                    <div class="text-center py-3">Address Details</div>
+                    <div class="flex justify-between mx-2 py-2">
+                        <button class="w-24 h-8"><i style="font-size:20px; color:red" class="fa">&#xf057;</i></button>
+                        <button class="w-24 h-8"><i style="font-size:20px" class="fa">&#xf055;</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectToResumeGenerator() {
+          window.location.href = "resume.html";
+        }
+        function redirectToLogin() {
+          window.location.href = "login.html";
+        }
+      
+        function redirectToScheduledCompanies() {
+          window.location.href = "ScheduledCompanies.html";
+        }
+        function redirectToAppliedCompanies(){
+          window.location.href = "appliedCompanies.html";
+        }
+      
+        function redirectToFillProfile(){
+          window.location.href = "fillProfile.html";
+        }
+      
+        function redirectToAcademicDetails(){
+          window.location.href = "academicDetails.html";
+        }
+        function redirectToDashboard(){
+            window.location.href = "index.html";
+        }
+        
+      </script>
+</body>
+</html>

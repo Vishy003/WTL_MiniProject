@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Companies</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+     
+</head>
+<body class="font-sans mx-0 my-0 py-0 px-0 box-border">
+    <nav class="bg-neutral-700 text-white py-[20px] align-middle sticky top-0 z-10">
+        <ul class="flex mx-4 justify-between">
+            <li class="flex">
+                <button id="sidebar"><i class="fas fa-bars text-white"></i></button>
+                <img src="./img/InternshipPortal.png" width="50px" alt="">
+            </li>
+            <li>
+                PICT User
+            </li>
+            <li class="text-xl bg-fuchsia-700 px-3 mx-2 rounded-full">
+                *
+            </li>
+        </ul>
+    </nav>
+
+    <div class="flex mt-[0px] h-[43.2rem] position-relative left-0">
+        <div class="w-72 bg-fuchsia-700 text-white sticky top-0" id="sidebar1">
+            <ul>
+                <li class="my-4 mx-3"><a href="#" onclick="redirectToDashboard()"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="my-4 mx-3">
+                    <a href="#" onclick="redirectToScheduledCompanies()"><i class="fas fa-calendar-check"></i> Scheduled Companies</a>
+                </li>
+                <li class="my-4 mx-3"><a href="#" onclick = "redirectToAppliedCompanies()"><i class="fas fa-envelope"></i> Applied Companies</a></li>
+                <li class="my-4 mx-3"><a href="#" onclick = "redirectToFillProfile()"><i class="fas fa-user"></i> Fill Profile</a></li>
+                <li class="my-4 mx-3"><a href="#" onclick = "redirectToAcademicDetails()"><i class="fas fa-tasks"></i> Academic Details</a></li>
+            </ul>
+        </div>
+
+        <div class="mx-7 w-11/12">
+            <div id="success">
+
+            </div>
+            <form class="my-3">
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="registration">Registration Number</label>
+                    <input type="text" class="form-control" id="registration">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
+                    <small id="firstNameFeedback" class="form-text invalid-feedback">Enter valid name</small>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" class="form-control" id="middleName">
+                    <small id="firstNameFeedback" class="form-text invalid-feedback">Enter valid name</small>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                    <small id="firstNameFeedback" class="form-text invalid-feedback">Enter valid name</small>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="dob">Date of birth</label>
+                    <input type="date" class="form-control" id="dob">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="gener">Gender</label>
+                    <select id="gender" class="form-control">
+                      <option selected>Female</option>
+                      <option>Male</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="department">Department</label>
+                    <input type="text" class="form-control" id="department">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" class="form-control" id="nationality">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber">
+                    <small id="phoneNumberFeedback" class="form-text invalid-feedback">Enter valid phone number</small>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="alterNumber">Alternate Number</label>
+                    <input type="text" class="form-control" id="alterNumber">
+                    <small id="firstNameFeedback" class="form-text invalid-feedback">Enter valid phone number</small>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="personalEmail">Personal Email</label>
+                    <input type="email" class="form-control" id="personalEmail">
+                    <small id="personalEmailFeedback" class="form-text invalid-feedback">Enter valid email</small>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="alterEmail">Alternate Email</label>
+                    <input type="email" class="form-control" id="alterEmail">
+                    <small id="firstNameFeedback" class="form-text invalid-feedback">Enter valid email</small>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="adharNumber">Adhar Number</label>
+                  <input type="text" class="form-control" id="adharNumber" placeholder="">
+                </div>
+
+                <div class="form-group">
+                  <label for="panNumber">PAN Number</label>
+                  <input type="text" class="form-control" id="panNumber" placeholder="">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="sscMarks">SSC Percentage</label>
+                    <input type="text" class="form-control" id="sscMarks">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="hscMarks">HSC / Diploma Percentage</label>
+                    <input type="email" class="form-control" id="hscMarks">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="currentCgpa">Current CGPA</label>
+                    <input type="text" class="form-control" id="currentCgpa">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-md-2">
+                    
+                  </div>
+                </div>
+
+                <button type="submit" id="submit" class="py-2 px-3 rounded-xl bg-fuchsia-600 text-white">Freeze</button>
+              </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="script.js">
+        function redirectToResumeGenerator() {
+      window.location.href = "resume.html";
+    }
+    function redirectToLogin() {
+      window.location.href = "login.html";
+    }
+
+    function redirectToScheduledCompanies() {
+      window.location.href = "ScheduledCompanies.html";
+    }
+    function redirectToAppliedCompanies(){
+      window.location.href = "appliedCompanies.html";
+    }
+
+    function redirectToFillProfile(){
+      window.location.href = "fillProfile.html";
+    }
+
+    function redirectToAcademicDetails(){
+      window.location.href = "academicDetails.html";
+    }
+    function redirectToDashboard(){
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
